@@ -1,0 +1,16 @@
+.notification-card {
+  background-color: var(--SecondColor) !important;
+  color: #fff;
+  box-shadow: 0 7px 13px 3px rgb(221 221 221 / 67%);
+}
+
+.notification-icon-container {
+  align-items: stretch;
+  background-color: white;
+  display: flex;
+}
+
+.warning-icon {
+  color: var(--MainColor);
+  margin: auto;
+}

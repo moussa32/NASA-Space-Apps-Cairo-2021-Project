@@ -1,0 +1,116 @@
+:root {
+  --MainColor: #ffc952;
+  --SecondColor: #48cae4;
+}
+
+#root {
+  z-index: 500;
+  position: relative;
+}
+
+/*Loader*/
+.lds-dual-ring {
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+}
+
+.lds-dual-second {
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+}
+
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid var(--MainColor);
+  border-color: var(--MainColor) transparent var(--MainColor) transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+
+.lds-dual-second:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid var(--SecondColor);
+  border-color: var(--SecondColor) transparent var(--SecondColor) transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes lds-dual-second {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.btn-main {
+  background-color: var(--MainColor);
+  color: white;
+}
+
+.btn-second {
+  background-color: var(--SecondColor);
+  color: white;
+}
+
+.text-second {
+  color: var(--SecondColor);
+}
+
+.bg-second {
+  background-color: var(--SecondColor);
+}
+
+.alert-success {
+  background-color: #43e9a4;
+  color: #fff;
+}
+
+.rounded-element {
+  border-radius: 40px;
+}
+
+.heading-line {
+  display: flex;
+  flex-direction: row;
+}
+.heading-line:before,
+.heading-line:after {
+  content: "";
+  flex: 1 1;
+  border-bottom: 1px solid;
+  margin: auto;
+}
+.heading-line:before {
+  margin-right: 10px;
+}
+.heading-line:after {
+  margin-left: 10px;
+}
+
+.tab-container {
+  height: calc(100vh - 136px);
+  overflow-y: scroll;
+}

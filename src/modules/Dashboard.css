@@ -1,0 +1,57 @@
+.weather-temp {
+  background-color: var(--SecondColor);
+  color: white;
+  flex-flow: row-reverse nowrap;
+  padding: 15px 2rem;
+  align-items: center;
+  border-radius: 15px;
+  font-family: "Montserrat", sans-serif;
+  box-shadow: 0 0 7px 3px #ddd;
+}
+
+.temp {
+  font-size: 3.5rem;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+}
+
+.stat-icon {
+  padding: 14px;
+  background: #48cae4;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.stat-item > p {
+  color: black;
+}
+
+.stat-container {
+  color: #212529;
+  text-align: center;
+  background: var(--MainColor);
+  padding: 5px;
+  margin-top: 5px;
+  border-radius: 5px;
+}
+
+.stat-container-1 {
+  background: #2ecc71;
+  color: #fff;
+}
+
+.stat-container-2 {
+  background: #34495e;
+  color: #fff;
+}
+
+.stat-container-4 {
+  background: #e74c3c;
+  color: #fff;
+}

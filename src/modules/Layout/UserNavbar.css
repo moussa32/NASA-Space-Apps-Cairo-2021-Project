@@ -1,0 +1,10 @@
+.dropdown-usernavbar {
+  left: -80px;
+}
+
+#basic-nav-dropdown {
+  color: #212529;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}

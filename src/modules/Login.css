@@ -1,0 +1,8 @@
+.login-background {
+  background: url("../assets/images/background.svg");
+  position: absolute;
+  height: 450px;
+  width: 100%;
+  background-repeat: no-repeat;
+  z-index: 99;
+}

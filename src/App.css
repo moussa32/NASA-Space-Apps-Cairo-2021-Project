@@ -1,0 +1,6 @@
+.app {
+  max-width: 820px;
+  margin: 0 auto;
+  z-index: 501;
+  position: relative;
+}
