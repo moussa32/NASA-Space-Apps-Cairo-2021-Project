@@ -1,9 +1,18 @@
 import axios from "axios";
-const key = "7033fc75de1542a8b71024aff3059a2b";
+const newsBaseURL =
+  "https://bing-news-search1.p.rapidapi.com/news/search?q=covid19&setLang=en&count=20";
+
+const newsHeaders = {
+  "x-bingapis-sdk": "true",
+  "x-rapidapi-host": "bing-news-search1.p.rapidapi.com",
+  "x-rapidapi-key": "93dd480e40msh0ff347350404c42p13cff4jsn8f57827f891f",
+};
 
 export const getCovidNews = async () => {
-  const res = await axios.get(
-    `https://newsapi.org/v2/everything?q=covid-19&from=2021-09-03&sortBy=popularity&language=en&apiKey=${key}`
-  );
+  const res = await axios.get(newsBaseURL, {
+    headers: {
+      ...newsHeaders,
+    },
+  });
   return res.data;
 };
