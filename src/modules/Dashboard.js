@@ -12,7 +12,6 @@ import { getCountryCovidVaccine, getCovidStats, getGlobalCovidStats } from "../a
 import { Line, PolarArea } from "react-chartjs-2";
 import { BiStats } from "react-icons/bi";
 import "./Dashboard.css";
-import { getUserInfo } from "../api/UserInfoApi";
 
 const options = {
   maintainAspectRatio: false,
@@ -129,7 +128,7 @@ const Dashboard = () => {
   return (
     <>
       <UserNavbar />
-      <Container>
+      <Container className="tab-container">
         <div className="weather-temp d-flex justify-content-between">
           <p className="temp mb-0">{convertWeather(weather?.temp)}</p>
           <div>
