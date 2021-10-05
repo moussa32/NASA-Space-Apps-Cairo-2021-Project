@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Container, Accordion, Alert } from "react-bootstrap";
 import BottomNavigation from "./Layout/BottomNavigation";
 import UserNavbar from "./Layout/UserNavbar";
@@ -9,7 +9,7 @@ import "./Result.css";
 const Result = () => {
   const result = JSON.parse(localStorage.getItem("results"));
   const riskFactor = result.risk_factor.risk_factor_probability.toFixed(1);
-  console.log(result);
+
   return (
     <div>
       <UserNavbar />
