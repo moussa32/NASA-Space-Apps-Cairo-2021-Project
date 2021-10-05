@@ -1,5 +1,6 @@
 import Start from "./modules/Start";
 import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
+import ProtectedRoute from "./shared/components/ProtectedRoute";
 import Login from "./modules/Login";
 import Disease from "./modules/Disease";
 import Signup from "./modules/Signup";
@@ -17,27 +18,17 @@ function App() {
           <Route exact path="/">
             <Start />
           </Route>
-          <Route path="/login">
+          <Route exact path="/login">
             <Login />
           </Route>
-          <Route path="/signup">
+          <Route exact path="/signup">
             <Signup />
           </Route>
-          <Route path="/disease">
-            <Disease />
-          </Route>
-          <Route path="/dashboard">
-            <Dashboard />
-          </Route>
-          <Route path="/result">
-            <Result />
-          </Route>
-          <Route path="/news">
-            <News />
-          </Route>
-          <Route path="/notifications">
-            <Notifications />
-          </Route>
+          <ProtectedRoute exact path="/disease" component={Disease} />
+          <ProtectedRoute exact path="/dashboard" component={Dashboard} />
+          <ProtectedRoute exact path="/result" component={Result} />
+          <ProtectedRoute exact path="/news" component={News} />
+          <ProtectedRoute exact path="/notifications" component={Notifications} />
         </Switch>
       </Router>
     </div>

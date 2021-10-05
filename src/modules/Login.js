@@ -35,6 +35,7 @@ const Login = ({ history }) => {
         setStatus({ type: "success", message: "You are logged in successfully" });
         localStorage.setItem("accesstoken", res?.access);
         localStorage.setItem("refreshtoken", res?.refresh);
+        localStorage.setItem("isAuthenticated", "true");
         setIsLoadding(false);
 
         setTimeout(() => {

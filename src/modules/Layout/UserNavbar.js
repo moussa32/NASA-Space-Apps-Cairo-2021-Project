@@ -1,5 +1,6 @@
 import React from "react";
 import { Navbar, Container, NavDropdown } from "react-bootstrap";
+import { withRouter } from "react-router-dom";
 import { MainLogo } from "../../assets";
 import { FaUserEdit } from "react-icons/fa";
 import { IoMdSettings } from "react-icons/io";
@@ -7,7 +8,11 @@ import { IoLogOutSharp } from "react-icons/io5";
 import Avatar from "../../shared/components/Avatar";
 import "./UserNavbar.css";
 
-const UserNavbar = () => {
+const UserNavbar = ({ history }) => {
+  const handleLogout = () => {
+    localStorage.clear();
+    history.push("/login");
+  };
   return (
     <div>
       <Navbar expand="lg">
@@ -29,7 +34,7 @@ const UserNavbar = () => {
               <IoMdSettings size={"1.07rem"} className="me-1" /> Settings
             </NavDropdown.Item>
             <NavDropdown.Divider />
-            <NavDropdown.Item className="d-flex align-items-center">
+            <NavDropdown.Item className="d-flex align-items-center" onClick={handleLogout}>
               <IoLogOutSharp size={"1.07rem"} className="me-1" />
               Logout
             </NavDropdown.Item>
@@ -40,4 +45,4 @@ const UserNavbar = () => {
   );
 };
 
-export default UserNavbar;
+export default withRouter(UserNavbar);
