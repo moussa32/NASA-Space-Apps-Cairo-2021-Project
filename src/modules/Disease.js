@@ -169,41 +169,56 @@ const Disease = ({ history }) => {
           >
             <VscInfo size={"1.8rem"} className="me-2" /> Exposure:
           </Form.Label>
-          <Form.Check
-            type="checkbox"
-            label="Biological Relative Tested Positive"
-            name="biological_relative_tested_positive"
-            className="ms-2"
-            onChange={updateExposure}
-          />
-          <Form.Check
-            type="checkbox"
-            label="Directly Exposed To Someone Who Tested Positive"
-            name="directly_exposed_to_someone_who_tested_positive"
-            className="ms-2"
-            onChange={updateExposure}
-          />
-          <Form.Check
-            type="checkbox"
-            label="Healthcare Worker Directly Exposed"
-            name="healthcare_worker_directly_exposed"
-            className="ms-2"
-            onChange={updateExposure}
-          />
-          <Form.Check
-            type="checkbox"
-            label="Household Member Tested Positive"
-            name="household_member_tested_positive"
-            className="ms-2"
-            onChange={updateExposure}
-          />
-          <Form.Check
-            type="checkbox"
-            label="Any"
-            name="any"
-            className="ms-2"
-            onChange={updateExposure}
-          />
+
+          <Form.Group controlId="biological_relative_tested_positive">
+            <Form.Check
+              type="checkbox"
+              label="Biological Relative Tested Positive"
+              name="biological_relative_tested_positive"
+              className="ms-2"
+              onChange={updateExposure}
+            />
+          </Form.Group>
+
+          <Form.Group controlId="directly_exposed_to_someone_who_tested_positive">
+            <Form.Check
+              type="checkbox"
+              label="Directly Exposed To Someone Who Tested Positive"
+              name="directly_exposed_to_someone_who_tested_positive"
+              className="ms-2"
+              onChange={updateExposure}
+            />
+          </Form.Group>
+
+          <Form.Group controlId="healthcare_worker_directly_exposed">
+            <Form.Check
+              type="checkbox"
+              label="Healthcare Worker Directly Exposed"
+              name="healthcare_worker_directly_exposed"
+              className="ms-2"
+              onChange={updateExposure}
+            />
+          </Form.Group>
+
+          <Form.Group controlId="household_member_tested_positive">
+            <Form.Check
+              type="checkbox"
+              label="Household Member Tested Positive"
+              name="household_member_tested_positive"
+              className="ms-2"
+              onChange={updateExposure}
+            />
+          </Form.Group>
+
+          <Form.Group controlId="any">
+            <Form.Check
+              type="checkbox"
+              label="Any"
+              name="any"
+              className="ms-2"
+              onChange={updateExposure}
+            />
+          </Form.Group>
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="Symptoms">
@@ -213,83 +228,115 @@ const Disease = ({ history }) => {
           >
             <VscInfo size={"1.8rem"} className="me-2" /> Symptoms:
           </Form.Label>
-          <Form.Check
-            type="checkbox"
-            label="Fever"
-            name="fever"
-            className="ms-2"
-            onChange={updateSymptoms}
-          />
-          <Form.Check
-            type="checkbox"
-            label="Coryza"
-            name="coryza"
-            className="ms-2"
-            onChange={updateSymptoms}
-          />
-          <Form.Check
-            type="checkbox"
-            label="Do you live with a Covid19 patient"
-            name="covid_at_home"
-            className="ms-2"
-            onChange={updateSymptoms}
-          />
-          <Form.Check
-            type="checkbox"
-            label="Loss of smell"
-            name="loss_of_smell"
-            className="ms-2"
-            onChange={updateSymptoms}
-          />
-          <Form.Check
-            type="checkbox"
-            label="Myalgia"
-            name="myalgia"
-            className="ms-2"
-            onChange={updateSymptoms}
-          />
-          <Form.Check
-            type="checkbox"
-            label="Shortness of breath"
-            name="shortness_of_breath"
-            className="ms-2"
-            onChange={updateSymptoms}
-          />
-          <Form.Check
-            type="checkbox"
-            label="Dry cough"
-            name="cough"
-            className="ms-2"
-            onChange={updateSymptoms}
-          />
-          <Form.Check
-            type="checkbox"
-            label="Nausea"
-            name="nausea"
-            className="ms-2"
-            onChange={updateSymptoms}
-          />
-          <Form.Check
-            type="checkbox"
-            label="Diarrhea"
-            name="diarrhea"
-            className="ms-2"
-            onChange={updateSymptoms}
-          />
-          <Form.Check
-            type="checkbox"
-            label="Sore throat"
-            name="sore_throat"
-            className="ms-2"
-            onChange={updateSymptoms}
-          />
-          <Form.Check
-            type="checkbox"
-            label="Headache"
-            name="headache"
-            className="ms-2"
-            onChange={updateSymptoms}
-          />
+          <Form.Group controlId="Fever">
+            <Form.Check
+              type="checkbox"
+              label="Fever"
+              name="fever"
+              className="ms-2"
+              onChange={updateSymptoms}
+            />
+          </Form.Group>
+
+          <Form.Group controlId="Coryza">
+            <Form.Check
+              type="checkbox"
+              label="Coryza"
+              name="coryza"
+              className="ms-2"
+              onChange={updateSymptoms}
+            />
+          </Form.Group>
+
+          <Form.Group controlId="covid_at_home">
+            <Form.Check
+              type="checkbox"
+              label="Do you live with a Covid19 patient"
+              name="covid_at_home"
+              className="ms-2"
+              onChange={updateSymptoms}
+            />
+          </Form.Group>
+
+          <Form.Group controlId="loss_of_smell">
+            <Form.Check
+              type="checkbox"
+              label="Loss of smell"
+              name="loss_of_smell"
+              className="ms-2"
+              onChange={updateSymptoms}
+            />
+          </Form.Group>
+
+          <Form.Group controlId="myalgia">
+            <Form.Check
+              type="checkbox"
+              label="Myalgia"
+              name="myalgia"
+              className="ms-2"
+              onChange={updateSymptoms}
+            />
+          </Form.Group>
+
+          <Form.Group controlId="shortness_of_breath">
+            <Form.Check
+              type="checkbox"
+              label="Shortness of breath"
+              name="shortness_of_breath"
+              className="ms-2"
+              onChange={updateSymptoms}
+            />
+          </Form.Group>
+
+          <Form.Group controlId="cough">
+            <Form.Check
+              type="checkbox"
+              label="Dry cough"
+              name="cough"
+              className="ms-2"
+              onChange={updateSymptoms}
+            />
+          </Form.Group>
+
+          <Form.Group controlId="nausea">
+            <Form.Check
+              type="checkbox"
+              label="Nausea"
+              name="nausea"
+              className="ms-2"
+              onChange={updateSymptoms}
+            />
+          </Form.Group>
+
+          <Form.Group controlId="diarrhea">
+            <Form.Check
+              type="checkbox"
+              label="Diarrhea"
+              name="diarrhea"
+              className="ms-2"
+              onChange={updateSymptoms}
+            />
+          </Form.Group>
+
+          <Form.Group controlId="sore_throat">
+            <Form.Check
+              type="checkbox"
+              label="Sore throat"
+              name="sore_throat"
+              className="ms-2"
+              onChange={updateSymptoms}
+            />
+          </Form.Group>
+
+          <Form.Group controlId="headache">
+            <Form.Check
+              type="checkbox"
+              label="Headache"
+              name="headache"
+              className="ms-2"
+              onChange={updateSymptoms}
+            />
+          </Form.Group>
         </Form.Group>
 
         <Button variant="main" className="w-100" size="lg" onClick={handleSubmit}>
