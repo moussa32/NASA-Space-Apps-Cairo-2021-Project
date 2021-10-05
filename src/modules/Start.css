@@ -1,6 +1,5 @@
 .start-slider {
-  height: 61vh;
-  margin-top: 2rem;
+  padding-top: 20px;
 }
 
 .carousel-inner {
@@ -8,19 +7,13 @@
 }
 
 .carousel-caption {
-  right: 11% !important;
-  bottom: -5.75rem !important;
-  left: 11% !important;
-}
-
-@media screen and (max-width: 320px) {
-  .carousel-caption {
-    bottom: -7.75rem !important;
-  }
+  position: unset !important;
+  padding: 0 2rem !important;
 }
 
 .carousel-indicators {
   margin-bottom: 0rem !important;
+  bottom: -30px !important;
 }
 
 .carousel-indicators [data-bs-target] {

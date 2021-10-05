@@ -8,7 +8,7 @@ import { RiHealthBookFill } from "react-icons/ri";
 import "./BottomNavigation.css";
 
 const BottomNavigation = ({ location }) => {
-  const [activeTab, setActiveTab] = useState("home");
+  const [activeTab, setActiveTab] = useState("dashboard");
 
   useEffect(() => {
     if (location.pathname.includes("dashboard")) {
@@ -28,9 +28,6 @@ const BottomNavigation = ({ location }) => {
 
   return (
     <nav className="bottomNav">
-      <Link className={`links ${activeTab === "home" ? "selected" : ""} text-white`} to="/">
-        <AiFillHome size={"1.5rem"} />
-      </Link>
       <Link
         className={`links ${activeTab === "dashboard" ? "selected" : ""} text-white`}
         to="/dashboard"

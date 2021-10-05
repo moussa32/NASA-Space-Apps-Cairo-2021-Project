@@ -3,4 +3,7 @@
   margin: 0 auto;
   z-index: 501;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }

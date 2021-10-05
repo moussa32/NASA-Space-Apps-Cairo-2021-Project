@@ -45,8 +45,8 @@ const Start = () => {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
-      <div className="mx-3">
-        <Link to="/login" className="btn btn-main rounded-element w-100 mt-4 d-block">
+      <div className="mx-3 mt-auto">
+        <Link to="/login" className="btn btn-main rounded-element w-100 mb-4 d-block">
           Get Start
         </Link>
       </div>
