@@ -6,6 +6,7 @@ import { postLogin } from "../api/LoginApi";
 import MainNavbar from "./Layout/MainNavbar";
 import Loader from "../shared/components/Loader";
 import "./Login.css";
+import { getUserInfo } from "../api/UserInfoApi";
 
 const Login = ({ history }) => {
   const {
@@ -31,12 +32,16 @@ const Login = ({ history }) => {
 
     postLogin(data)
       .then(res => {
-        console.log(res);
         setStatus({ type: "success", message: "You are logged in successfully" });
         localStorage.setItem("accesstoken", res?.access);
         localStorage.setItem("refreshtoken", res?.refresh);
         localStorage.setItem("isAuthenticated", "true");
         setIsLoadding(false);
+
+        getUserInfo(res?.access).then(res => {
+          localStorage.setItem("user-info", JSON.stringify(res));
+          sessionStorage.setItem("user-info", JSON.stringify(res));
+        });
 
         setTimeout(() => {
           history.push("/dashboard");

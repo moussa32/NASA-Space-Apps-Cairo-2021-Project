@@ -18,8 +18,7 @@ const Result = () => {
           <CircularProgressbar
             value={result.probability_of_testing_positive.toFixed(1)}
             text={`${result.probability_of_testing_positive.toFixed(1)}%`}
-            className="w-100 d-block"
-            className="probability-icon"
+            className="w-100 d-block probability-icon"
           />
           <p>Probability of Testing Positive</p>
         </div>

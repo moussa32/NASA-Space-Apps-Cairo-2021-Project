@@ -11,6 +11,7 @@ import "./UserNavbar.css";
 const UserNavbar = ({ history }) => {
   const handleLogout = () => {
     localStorage.clear();
+    sessionStorage.clear();
     history.push("/login");
   };
   return (

@@ -28,7 +28,7 @@ const NewsCard = ({
           <div className="card-body">
             <h5 className="card-title">{title}</h5>
             <small className="mb-2 text-muted d-flex align-items-center">
-              <img src={authorImage} width={24} height={24} className="me-2" />
+              <img src={authorImage} width={24} height={24} alt={author} className="me-2" />
               {author}
             </small>
             <p className="card-text">{description}</p>

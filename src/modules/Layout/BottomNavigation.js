@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Link, withRouter } from "react-router-dom";
-import { AiFillHome } from "react-icons/ai";
 import { MdDashboard } from "react-icons/md";
 import { IoMdNotifications } from "react-icons/io";
 import { IoNewspaper } from "react-icons/io5";

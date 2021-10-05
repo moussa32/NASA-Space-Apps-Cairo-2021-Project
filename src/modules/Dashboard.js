@@ -39,7 +39,9 @@ const Dashboard = () => {
   const lastMonthCases = [...lastMonth.map(item => item.cases)];
 
   const accesstoken = localStorage.getItem("accesstoken");
-  const userCountryName = JSON.parse(localStorage.getItem("user-info"))?.country;
+  const userCountryName =
+    JSON.parse(localStorage.getItem("user-info"))?.country ||
+    JSON.parse(sessionStorage.getItem("user-info"))?.country;
 
   const data = {
     labels: lastMonthDate,
@@ -86,10 +88,6 @@ const Dashboard = () => {
   };
 
   useEffect(() => {
-    getUserInfo(accesstoken).then(res => {
-      localStorage.setItem("user-info", JSON.stringify(res));
-    });
-
     getWeather(weatherApiKey).then(res => {
       setWeather({ temp: res?.main?.temp, status: res?.weather[0]?.description });
     });
