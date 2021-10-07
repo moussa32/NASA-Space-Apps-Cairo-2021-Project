@@ -5,10 +5,13 @@ import { BrowserRouter } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 import TimeAgo from "javascript-time-ago";
 import en from "javascript-time-ago/locale/en.json";
+import { swDev } from "./swDev";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
 
 TimeAgo.addDefaultLocale(en);
+
+swDev();
 
 ReactDOM.render(
   <React.StrictMode>
